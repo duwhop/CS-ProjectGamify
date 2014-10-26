@@ -10,8 +10,8 @@ handlers:
 - url: /clothes-pics
   static_dir: clothes-pics 
 
-- url: /assets
-  static_dir: assets
+- url: /images
+  static_dir: images
 
 - url: .*
   script: main.application
