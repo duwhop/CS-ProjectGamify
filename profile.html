@@ -1,9 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{{ greeting|safe }}
+
 <html>
 <body>
 <table border=0 widht="900px">
 <div id="geninfo">
 <tr>
-<td width="180px"><img src="dwight.jpg" width="200px"></td> 
+<td width="180px"><img src="/dwight.jpg" width="200px"></td> 
 <td width="375px" style ="padding:20px"> <h2><font color="#e66007">Dwight Thomas</font></h2>
 Student<br>Howard University<br>
 Department of Systems and Computer Science</td>
@@ -29,3 +35,4 @@ Department of Systems and Computer Science</td>
 <iframe name="myiframe" src="http://www.facebook.com" width="900px" height="400px" border="0"></iframe>
 </body>
 </html>
+{%endblock%}
