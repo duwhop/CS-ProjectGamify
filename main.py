@@ -64,7 +64,7 @@ class FormHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('choose-outfit.html')
         self.response.write(template.render({'user': user}))
     
-'''class ImagesHandler(webapp2.RequestHandler):
+class ImagesHandler(webapp2.RequestHandler):
 
     def post(self):
         day = cgi.escape(self.request.get('day_of_week'))
@@ -128,7 +128,7 @@ class FormHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('images.html')
         self.response.write(template.render())
              
-'''
+
 class AboutHandler(webapp2.RequestHandler):
 
     def get(self):
