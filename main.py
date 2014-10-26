@@ -219,7 +219,7 @@ application = webapp2.WSGIApplication(
         ('/rateOutfit', rateOutfitHandler),
 	('/showcase', showcaseHandler),
 	('/Skills', skillsHandler),
-	('/Achievement', achievementHandler),
+	('/achievement', achievementHandler),
 	('Rank', rankHandler),
         ('/images', ImagesHandler)
     ],
