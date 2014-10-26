@@ -220,7 +220,7 @@ application = webapp2.WSGIApplication(
 	('/showcase', showcaseHandler),
 	('/Skills', skillsHandler),
 	('/achievement', achievementHandler),
-	('Rank', rankHandler),
+	('/Rank', rankHandler),
         ('/images', ImagesHandler)
     ],
                               debug=True)
