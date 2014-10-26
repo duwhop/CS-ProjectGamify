@@ -182,6 +182,21 @@ class profileHandler(webapp2.RequestHandler):
 	template = JINJA_ENVIRONMENT.get_template('profile.html')
 	self.response.write(template.render())
 
+class skillsHandler(webapp2.RequestHandler):
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('Skills.html')
+	self.response.write(template.render())
+
+class rankHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('Rank.html')
+        self.response.write(template.render())
+
+class achievementHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('achievement.html')
+        self.response.write(template.render())
+
 """class imagesHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -203,6 +218,9 @@ application = webapp2.WSGIApplication(
 	('/BasicprojectMP', projectMPHandler),
         ('/rateOutfit', rateOutfitHandler),
 	('/showcase', showcaseHandler),
+	('/Skills', skillsHandler),
+	('/Achievement', achievementHandler),
+	('Rank', rankHandler),
         ('/images', ImagesHandler)
     ],
                               debug=True)
