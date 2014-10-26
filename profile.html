@@ -1,3 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{{ greeting|safe }}
+
 <html>
 <body>
 <table border=0 widht="900px">
@@ -29,3 +35,4 @@ Department of Systems and Computer Science</td>
 <iframe name="myiframe" src="http://www.facebook.com" width="900px" height="400px" border="0"></iframe>
 </body>
 </html>
+{%endblock%}
