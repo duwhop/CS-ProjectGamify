@@ -172,7 +172,7 @@ class projectMPHandler(webapp2.RequestHandler):
 	template = JINJA_ENVIRONMENT.get_template('projectMP.html')
 	self.response.write(template.render())
 
-class showcaseHandler(webb2.RequestHandler):
+class showcaseHandler(webapp2.RequestHandler):
     def get(self):
 	template = JINJA_ENVIRONMENT.get_template('showcase.html')
 	self.response.write(template.render())
