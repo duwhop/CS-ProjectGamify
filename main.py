@@ -132,7 +132,7 @@ class ImagesHandler(webapp2.RequestHandler):
 class AboutHandler(webapp2.RequestHandler):
 
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('about.html')
+        template = JINJA_ENVIRONMENT.get_template('ABOUT.html')
         self.response.write(template.render())
 
 class homeHandler(webapp2.RequestHandler):
@@ -160,6 +160,28 @@ class rateOutfitHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('outfit-feedback.html')
         self.response.write(template.render())
 
+class resourcesHandler(webapp2.RequestHandler):
+
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('resources.html')
+	self.response.write(template.render())
+
+class projectMPHandler(webapp2.RequestHandler):
+
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('projectMP.html')
+	self.response.write(template.render())
+
+class showcaseHandler(webapp2.RequestHandler):
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('showcase.html')
+	self.response.write(template.render())
+
+class profileHandler(webapp2.RequestHandler):
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('profile.html')
+	self.response.write(template.render())
+
 """class imagesHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -172,11 +194,15 @@ application = webapp2.WSGIApplication(
         ('/', MainPage),
         ('/outfitform', FormHandler),
         ('/query_test', QueryTest),
-        ('/about', AboutHandler),
+        ('/ABOUT', AboutHandler),
         ('/home', homeHandler),
-        ('/contact', contactHandler),
+        ('/profile', profileHandler),
+	('/contact', contactHandler),
         ('/choose-outfit', chooseOutfitHandler),
+	('/resources', resourcesHandler),
+	('/projectMP', projectMPHandler),
         ('/rateOutfit', rateOutfitHandler),
+	('/showcase', showcaseHandler),
         ('/images', ImagesHandler)
     ],
                               debug=True)
