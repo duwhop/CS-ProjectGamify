@@ -1,0 +1,24 @@
+application: watwewear
+version: 1
+runtime: python27
+
+api_version: 1
+
+
+threadsafe: true
+handlers:
+- url: /clothes-pics
+  static_dir: clothes-pics 
+
+- url: /assets
+  static_dir: assets
+
+- url: .*
+  script: main.application
+  login: required
+
+libraries:
+- name: jinja2
+  version: "latest"
+- name: webapp2
+  version: "latest"
