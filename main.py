@@ -64,7 +64,7 @@ class FormHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('choose-outfit.html')
         self.response.write(template.render({'user': user}))
     
-class ImagesHandler(webapp2.RequestHandler):
+'''class ImagesHandler(webapp2.RequestHandler):
 
     def post(self):
         day = cgi.escape(self.request.get('day_of_week'))
@@ -128,7 +128,7 @@ class ImagesHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('images.html')
         self.response.write(template.render())
              
-
+'''
 class AboutHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -166,6 +166,12 @@ class resourcesHandler(webapp2.RequestHandler):
 	template = JINJA_ENVIRONMENT.get_template('resources.html')
 	self.response.write(template.render())
 
+class projectMPHandler(webapp2.RequestHandler):
+
+    def get(self):
+	template = JINJA_ENVIRONMENT.get_template('projectMP.html')
+	self.response.write(template.render())
+
 """class imagesHandler(webapp2.RequestHandler):
 
     def get(self):
@@ -183,6 +189,7 @@ application = webapp2.WSGIApplication(
         ('/contact', contactHandler),
         ('/choose-outfit', chooseOutfitHandler),
 	('/resources', resourcesHandler),
+	('/projectMP', projectMPHandler),
         ('/rateOutfit', rateOutfitHandler),
         ('/images', ImagesHandler)
     ],
