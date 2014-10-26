@@ -169,7 +169,7 @@ class resourcesHandler(webapp2.RequestHandler):
 class projectMPHandler(webapp2.RequestHandler):
 
     def get(self):
-	template = JINJA_ENVIRONMENT.get_template('projectMP.html')
+	template = JINJA_ENVIRONMENT.get_template('advancedprojectMP.html')
 	self.response.write(template.render())
 
 class showcaseHandler(webapp2.RequestHandler):
@@ -200,7 +200,7 @@ application = webapp2.WSGIApplication(
 	('/contact', contactHandler),
         ('/choose-outfit', chooseOutfitHandler),
 	('/resources', resourcesHandler),
-	('/projectMP', projectMPHandler),
+	('/advancedprojectMP', projectMPHandler),
         ('/rateOutfit', rateOutfitHandler),
 	('/showcase', showcaseHandler),
         ('/images', ImagesHandler)
