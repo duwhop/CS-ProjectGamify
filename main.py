@@ -132,7 +132,7 @@ class ImagesHandler(webapp2.RequestHandler):
 class AboutHandler(webapp2.RequestHandler):
 
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('about.html')
+        template = JINJA_ENVIRONMENT.get_template('ABOUT.html')
         self.response.write(template.render())
 
 class homeHandler(webapp2.RequestHandler):
@@ -188,7 +188,7 @@ application = webapp2.WSGIApplication(
         ('/', MainPage),
         ('/outfitform', FormHandler),
         ('/query_test', QueryTest),
-        ('/about', AboutHandler),
+        ('/ABOUT', AboutHandler),
         ('/home', homeHandler),
         ('/contact', contactHandler),
         ('/choose-outfit', chooseOutfitHandler),
